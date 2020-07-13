@@ -58,8 +58,7 @@ app.post('/message/scheduled', jsonParser, (req, res) => {
                 
             }
 
-            
-               var idCollection = result[i].id;
+              var idCollection = result[i].id;
                if(result[i].isqueued === 0 && result[i].isPrinted === 0)
               {
                  
@@ -74,7 +73,6 @@ app.post('/message/scheduled', jsonParser, (req, res) => {
                   })
 
                 
-                  
                 var cronF = result[i].print_time.split(':');
                 var cronScedule = cronF[2] +" "+cronF[1] + " " + cronF[0] + " " + "* * *";
                 console.log("Message " + clientMessage + " to be sent at " + time);
@@ -106,10 +104,7 @@ app.post('/message/scheduled', jsonParser, (req, res) => {
         })
 
     })    
-
-    
-
-    res.end();
+res.end();
    
     
 })
